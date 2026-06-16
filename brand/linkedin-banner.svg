@@ -47,6 +47,6 @@
   <!-- bottom bar -->
   <rect x="0" y="556" width="1200" height="71" fill="#0b0e12"/>
   <rect x="0" y="556" width="1200" height="2" fill="#ff9f1c" opacity="0.4"/>
-  <text x="80" y="600" font-family="Consolas, monospace" font-size="22" fill="#4dabf7">github.com/&lt;username&gt;/orionwatch</text>
+  <text x="80" y="600" font-family="Consolas, monospace" font-size="22" fill="#4dabf7">github.com/behruzops/orionwatch</text>
   <text x="1120" y="600" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="19" fill="#8b98a8">Node.js · cross-platform · open</text>
 </svg>

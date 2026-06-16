@@ -67,11 +67,24 @@ npm install -g .      # so'ng istalgan joydan:
 orionwatch
 ```
 
-### 4) Docker (Linux server tavsiya etiladi)
+### 4) Docker — tayyor image (eng oson, Linux server)
+GitHub Container Registry'dan tayyor image (build kerak emas):
 ```bash
+docker run -d --name orionwatch --restart unless-stopped \
+  --network host --pid host \
+  -v /var/run/docker.sock:/var/run/docker.sock:ro \
+  -v "$PWD/data:/app/data" \
+  ghcr.io/behruzops/orionwatch:v1.0
+```
+So'ng → `http://SERVER_IP:7575`
+
+### 5) GitHub'dan yuklab olib, Docker'da (compose)
+```bash
+git clone https://github.com/behruzops/orionwatch.git
+cd orionwatch
 docker compose up -d --build
 ```
-- `network_mode: host` + `pid: host` — host portlari va jarayonlarini ko'rish uchun
+- `network_mode: host` + `pid: host` — host portlari/jarayonlarini ko'rish uchun
 - `/var/run/docker.sock` (ro) — host Docker containerlarini ko'rish uchun
 - Ma'lumot (`store.json`) `./data` da saqlanadi
 
