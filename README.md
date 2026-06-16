@@ -6,6 +6,16 @@ Docker containerlar + local serverlar (portlar) avtomatik aniqlanadi, har biriga
 
 > Yengil: **nol qo'shimcha kutubxona** (faqat Node.js). Native modul yo'q, build talab qilmaydi.
 
+## Nima uchun kerak? (foydasi)
+
+Ko'p loyiha, port va Docker container ishlatadigan dasturchi/DBA/server admin uchun "qaysi port band, qaysi container ishlayapti, qaysi havola qayoqqa olib boradi" — doim chalkash bo'ladi. OrionWatch buni hal qiladi:
+
+- **Bitta oyna** — barcha Docker + local serverlar bir joyda, bosib ochiladigan havolalar bilan. `docker ps` / `netstat` terib o'tirish shart emas.
+- **Vaqt tejaydi** — yangi server/loyiha qo'shilsa o'zi aniqlaydi va 🆕 belgilaydi; Telegram'ga xabar yuboradi.
+- **Tartib** — har loyihaga izoh + tokenlar (Telegram, GitHub, DB parol) yagona, niqoblangan joyda; qidirib yurmaysiz.
+- **Yengil & xavfsiz** — nol qo'shimcha kutubxona, ma'lumot faqat **sizning** kompyuteringizda (`store.json`), tashqariga chiqmaydi.
+- **Hamma joyda** — kompyuter (Windows), server (Linux), Docker — bir xil ishlaydi, 3 tilda.
+
 ## Imkoniyatlar
 - 🐳 **Docker containerlar** — nom, image, status, portlar (bosiladigan havola)
 - ⚙️ **Local serverlar** — ishlab turgan portlar (Windows `netstat`, Linux `ss`, macOS `lsof`); OS shovqini filtrlangan
