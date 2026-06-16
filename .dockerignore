@@ -1,0 +1,11 @@
+node_modules
+data
+store.json
+*.log
+.git
+.gitignore
+README.md
+start.bat
+start.sh
+Dockerfile
+docker-compose.yml

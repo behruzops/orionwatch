@@ -1,0 +1,19 @@
+{
+  "name": "orionwatch",
+  "version": "1.0.0",
+  "description": "OrionWatch — local loyihalar, portlar va Docker containerlar monitoringi. © OrionSystems",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "orionwatch": "server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "OrionSystems",
+  "license": "UNLICENSED",
+  "private": true
+}

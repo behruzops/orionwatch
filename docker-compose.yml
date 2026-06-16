@@ -1,0 +1,17 @@
+# OrionWatch — Linux server uchun. © OrionSystems
+# network_mode/pid host — host portlari va jarayonlarini ko'rish uchun (faqat Linux).
+# Windows/macOS'da konteynerdan host monitoring ishlamaydi — u yerda native ishga tushiring.
+services:
+  orionwatch:
+    build: .
+    image: orionwatch
+    container_name: orionwatch
+    network_mode: host # host portlari ss bilan ko'rinadi (panel ham host:7575)
+    pid: host # jarayon nomlari ko'rinadi
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # host Docker
+      - ./data:/app/data # store.json (tokenlar, sozlamalar) saqlanadi
+    environment:
+      - PORT=7575
+      - STORE_PATH=/app/data/store.json
+    restart: unless-stopped

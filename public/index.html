@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrionWatch — OrionSystems</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>" />
+  </head>
+  <body>
+    <header>
+      <div class="brand-box">
+        <h1 id="brand">🛰️ Orion<span>Watch</span></h1>
+        <span class="vendor" id="vendor">by OrionSystems</span>
+      </div>
+      <div class="spacer"></div>
+      <span class="meta" id="meta">…</span>
+      <div class="langsw" id="langsw">
+        <button data-lang="uz">UZ</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
+      </div>
+      <label class="toggle"><input type="checkbox" id="auto" checked /> <span id="autoLabel">Auto 5s</span></label>
+      <button class="btn" id="check">🔔 Tekshirish</button>
+      <button class="btn" id="add">➕ Loyiha</button>
+      <button class="btn" id="settings" title="Sozlamalar">⚙️</button>
+      <button class="btn" id="refresh" title="Yangilash">🔄</button>
+    </header>
+    <div id="app"><div class="empty">Yuklanmoqda…</div></div>
+
+    <footer id="foot">🛰️ OrionWatch · © <span id="year">2026</span> OrionSystems — barcha huquqlar himoyalangan</footer>
+
+    <div id="toast" class="toast-wrap"></div>
+    <div id="modal" class="modal hidden"><div class="modal-card" id="modalCard"></div></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
